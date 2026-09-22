@@ -7,14 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --ink: #1c2430;
-  --ink-soft: #4a5364;
-  --paper: #f2ede1;
-  --paper-deep: #e8e0cd;
-  --paper-line: #cabb96;
-  --gold: #9c6b23;
-  --gold-deep: #7c5419;
-  --white: #fffdf8;
+  --ink: #1b2e22;
+  --ink-soft: #4d6357;
+  --paper: #eef1e7;
+  --paper-deep: #dfe6d5;
+  --paper-line: #b7c4a8;
+  --gold: #4c7a4f;
+  --gold-deep: #35603a;
+  --white: #fbfdf8;
   --max: 760px;
   --serif: 'Source Serif 4', Georgia, serif;
   --sans: 'IBM Plex Sans', -apple-system, sans-serif;
@@ -241,6 +241,11 @@ ul.plain li:first-child, ol.plain li:first-child { border-top: none; }
   border: 1px solid var(--paper-line);
 }
 
+.plo-grid {
+  grid-auto-flow: column;
+  grid-template-rows: repeat(6, auto);
+}
+
 .clo-grid .cell {
   background: var(--paper);
   padding: 16px 18px;
@@ -421,6 +426,7 @@ footer.site .wrap {
 
 @media (max-width: 620px) {
   .clo-grid { grid-template-columns: 1fr; }
+  .plo-grid { grid-auto-flow: row; grid-template-rows: none; }
   .account-grid { grid-template-columns: 1fr; }
 
   nav.site {
@@ -443,7 +449,7 @@ footer.site .wrap {
 
   .sched-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -22px; padding: 0 22px; }
   table.sched { font-size: 13px; min-width: 480px; }
-  table.sched th:nth-child(3), table.sched td:nth-child(3) { display: none; }
+  table.weekly th:nth-child(3), table.weekly td:nth-child(3) { display: none; }
 
   .module-body { padding: 22px 20px 24px; }
   .account-card { padding: 22px 20px; }
